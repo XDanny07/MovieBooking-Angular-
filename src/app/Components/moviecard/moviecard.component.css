@@ -1,0 +1,24 @@
+.moviecard {
+  position: relative;
+  width: max-content;
+  transition: all 200ms;
+  cursor: pointer;
+  background-color: white;
+}
+.moviecard:hover {
+  transform: scale(1.01);
+}
+.moviecard::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: small;
+  content: "Coming Soon";
+  color: black;
+  padding: 5px;
+  border: solid 1px black;
+  border-radius: 0.6rem;
+  background-color: rgb(206, 177, 15);
+  font-weight: 700;
+  transform: translate(20%, -10%);
+}

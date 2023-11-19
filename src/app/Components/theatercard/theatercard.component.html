@@ -1,0 +1,43 @@
+<div>
+  <div class="theater d-flex justify-content-start gap-5 align-items-center">
+    <div class="th1">
+      <div class="d-flex gap-5 justify-content-between align-items-center">
+        <h5>{{ tdata.tname }}</h5>
+        <span>INFO</span>
+      </div>
+      <div>
+        <img class="px-2" src="../../../assets/food.png" alt="" />
+        <span style="color: orange; margin-top: 5px">Food</span>
+      </div>
+    </div>
+    <div class="th2 d-flex gap-3">
+      <button
+        *ngFor="let m of tdata.bookedslots"
+        type="button"
+        class="booked border px-3 py-2 rounded"
+      >
+        {{ m }}
+      </button>
+
+      <button
+        *ngFor="let m of tdata.fastslots"
+        type="button"
+        class="fast-filling border px-3 py-2 rounded"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModalCenter"
+      >
+        {{ m }}
+      </button>
+      <button
+        *ngFor="let m of tdata.availableslots"
+        type="button"
+        class="available border px-3 py-2 rounded"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModalCenter"
+      >
+        {{ m }}
+      </button>
+    </div>
+  </div>
+  <app-seats (continue)="continuebook($event)" class="app-seats"></app-seats>
+</div>

@@ -1,0 +1,23 @@
+* {
+  --textcol: rgb(16, 145, 197);
+  --bgcol: white;
+}
+.dateslider {
+  width: max-content;
+}
+.dateslider button {
+}
+.datebox span {
+  pointer-events: none;
+}
+.datebox {
+  color: var(--textcol);
+  background-color: var(--bgcol);
+  border-color: var(--textcol);
+  transition: all ease-in-out 150ms;
+  cursor: pointer;
+}
+.datebox:hover {
+  color: var(--bgcol) !important;
+  background-color: var(--textcol) !important;
+}

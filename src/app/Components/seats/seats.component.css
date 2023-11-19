@@ -1,0 +1,31 @@
+.noofseats {
+  display: flex;
+  gap: 10px;
+}
+.noofseats button {
+  background-color: white;
+  color: black;
+  transition: all ease-in-out 100ms;
+}
+.noofseats button:hover {
+  background-color: black !important;
+  color: white !important;
+}
+.seatselected {
+  background-color: black;
+  color: white;
+}
+.seatsbox {
+  margin: auto;
+  width: max-content;
+  transition: all ease-in-out;
+  transition-duration: 200ms;
+  transition-delay: 400ms;
+}
+.otaku {
+  min-height: 32px;
+}
+.continuebook {
+  pointer-events: all !important;
+  cursor: not-allowed;
+}

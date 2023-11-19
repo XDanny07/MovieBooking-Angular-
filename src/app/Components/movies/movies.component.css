@@ -1,0 +1,8 @@
+.movcontainer {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-items: center;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+}

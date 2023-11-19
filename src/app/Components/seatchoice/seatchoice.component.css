@@ -1,0 +1,22 @@
+.seat {
+  text-align: center;
+  border: solid;
+  border-width: thin;
+  width: 29px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 7%;
+}
+.bookedseat {
+  color: rgb(7, 220, 7);
+  border-color: rgb(7, 220, 7);
+  cursor: pointer;
+  transition: all ease-in-out 100ms;
+}
+.bookedseat:hover {
+  color: white;
+  background-color: rgb(7, 220, 7);
+}
+span {
+  pointer-events: none;
+}

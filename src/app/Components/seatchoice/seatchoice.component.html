@@ -1,0 +1,118 @@
+<div>
+  <div class="recliners">
+    <p>ROYAL RECLINERS-Rs570</p>
+    <hr />
+    <div class="d-flex align-items-center gap-5">
+      <div style="width: 29px"><span>A</span></div>
+      <div class="d-flex gap-2">
+        <div *ngFor="let n of this.seatmap">
+          <div
+            (click)="selected($event)"
+            id="A"
+            class="seat bookedseat"
+            *ngIf="n != 0; else elseBlock"
+          >
+            <span>{{ n }}</span>
+          </div>
+          <ng-template #elseBlock
+            ><div style="width: 29px"><span>&nbsp;</span></div></ng-template
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gold">
+    <p>GOLD-Rs300</p>
+    <hr />
+    <div style="margin-top: 10px" class="d-flex align-items-center gap-5">
+      <div style="width: 29px"><span>B</span></div>
+      <div class="d-flex gap-2">
+        <div *ngFor="let n of this.seatmap">
+          <div
+            (click)="selected($event)"
+            id="B"
+            class="seat bookedseat"
+            *ngIf="n != 0; else elseBlock"
+          >
+            <span>{{ n }}</span>
+          </div>
+          <ng-template #elseBlock
+            ><div style="width: 29px"><span>&nbsp;</span></div></ng-template
+          >
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 10px" class="d-flex align-items-center gap-5">
+      <div style="width: 29px"><span>C</span></div>
+      <div class="d-flex gap-2">
+        <div *ngFor="let n of this.seatmap">
+          <div
+            (click)="selected($event)"
+            id="C"
+            class="seat bookedseat"
+            *ngIf="n != 0; else elseBlock"
+          >
+            <span>{{ n }}</span>
+          </div>
+          <ng-template #elseBlock
+            ><div style="width: 29px"><span>&nbsp;</span></div></ng-template
+          >
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 10px" class="d-flex align-items-center gap-5">
+      <div style="width: 29px"><span>D</span></div>
+      <div class="d-flex gap-2">
+        <div *ngFor="let n of this.seatmap">
+          <div
+            (click)="selected($event)"
+            id="D"
+            class="seat bookedseat"
+            *ngIf="n != 0; else elseBlock"
+          >
+            <span>{{ n }}</span>
+          </div>
+          <ng-template #elseBlock
+            ><div style="width: 29px"><span>&nbsp;</span></div></ng-template
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="silver">
+    <p>SILVER-Rs210</p>
+    <hr />
+    <div
+      style="margin-top: 10px"
+      *ngFor="let x of this.silvermap"
+      class="d-flex align-items-center gap-5"
+    >
+      <div style="width: 29px">
+        <span>{{ x }}</span>
+      </div>
+      <div class="d-flex gap-2">
+        <div *ngFor="let n of this.seatmap">
+          <div
+            (click)="selected($event)"
+            id="{{ x }}"
+            class="seat bookedseat"
+            *ngIf="n != 0; else elseBlock"
+          >
+            <span>{{ n }}</span>
+          </div>
+          <ng-template #elseBlock
+            ><div style="width: 29px"><span>&nbsp;</span></div></ng-template
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    routerLink="/Movie/Payment/{{ this.moviedata.Title }}/{{ this.amount }}/{{
+      this.finalseats
+    }}"
+    class="btn btn-danger px-4"
+  >
+    Pay {{ this.amount }}
+  </button>
+</div>

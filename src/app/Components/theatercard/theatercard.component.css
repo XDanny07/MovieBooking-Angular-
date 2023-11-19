@@ -1,0 +1,29 @@
+.th1 {
+  width: 30%;
+}
+.th2 button {
+  transition: all ease-in-out 100ms;
+}
+.booked {
+  color: gray;
+  border-color: gray;
+  background-color: white;
+}
+.fast-filling {
+  color: orange;
+  border-color: orange;
+  background-color: white;
+}
+.available {
+  color: rgb(7, 220, 7);
+  border-color: rgb(7, 220, 7);
+  background-color: white;
+}
+.fast-filling:hover {
+  color: white;
+  background-color: orange;
+}
+.available:hover {
+  color: white;
+  background-color: rgb(7, 220, 7);
+}

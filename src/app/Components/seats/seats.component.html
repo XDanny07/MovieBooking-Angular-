@@ -1,0 +1,58 @@
+<div
+  class="modal fade"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-0 flex-row-reverse">
+        <button
+          type="button"
+          class="close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="clean()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body px-4">
+        <div class="seatsbox d-flex flex-column gap-2 align-items-center">
+          <p class="m-0">How Many Seats ?</p>
+          <div class="otaku">
+            <img
+              *ngFor="let x of otakuarr"
+              src="../../../assets/otaku.png"
+              alt="P"
+            />
+          </div>
+          <div class="noofseats">
+            <button
+              (click)="seatselect($event)"
+              class="rounded-circle px-2"
+              *ngFor="let x of this.arr"
+              value="{{ x }}"
+            >
+              {{ x }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button
+          (click)="continuetobook()"
+          disabled
+          type="button"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          class="close btn btn-primary continuebook"
+        >
+          Continue
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

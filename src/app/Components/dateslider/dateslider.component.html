@@ -1,0 +1,17 @@
+<div class="dateslider d-flex justify-items-center align-items-center gap-2">
+  <button (click)="changedates(-1)">Prev</button>
+  <div class="alldates d-flex gap-1">
+    <div
+      style="min-width: 60px"
+      class="datebox d-flex flex-column justify-items-center align-items-center border p-1 rounded"
+      *ngFor="let d of datescardinfo[this.toDisplay]; index as i"
+      (click)="dateselected($event)"
+      id="{{ i }}{{ this.toDisplay }}"
+    >
+      <span>{{ d.week }}</span>
+      <span>{{ d.date }}</span>
+      <span>{{ d.month }}</span>
+    </div>
+  </div>
+  <button (click)="changedates(1)">Next</button>
+</div>
