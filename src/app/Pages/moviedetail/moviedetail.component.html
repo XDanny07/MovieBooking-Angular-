@@ -1,6 +1,6 @@
 <div class="container m-0 p-0">
   <div *ngIf="this.watchtrailer; else elseBlock">
-    <div class="trailer bg-danger">
+    <div class="trailer">
       <iframe
         class="p-1 mx-auto d-block"
         width="936"
@@ -11,31 +11,25 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
       ></iframe>
-      <button class="" (click)="watch()">Go Back</button>
+      <button class="allbtn gobackbtn" (click)="watch()">Go Back</button>
     </div>
   </div>
   <ng-template #elseBlock>
-    <div class="moviedetails d-flex bg-primary p-4">
+    <div class="moviedetails d-flex p-4">
       <img class="rounded" src="{{ data.Poster }}" alt="" />
       <div>
-        <div class="p-4">
-          <h1>{{ data.Title }}</h1>
+        <div class="p-4 d-flex flex-column gap-3">
+          <h1 class="text-white">{{ data.Title }}</h1>
           <div
-            class="rating d-flex justify-content-between align-content-center align-items-center"
+            class="rating d-flex gap-3 text-white align-content-center align-items-center"
           >
-            <img
-              src="../../../assets/imdb.png"
-              class="rounded"
-              width="60px"
-              alt="IMDB LOGO"
-            />
             <h4 class="d-flex align-items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 fill="yellow"
-                class="bi bi-star-fill"
+                class="bi bi-star-fill mb-1"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -43,29 +37,42 @@
                 /></svg
               >{{ data.imdbRating }}/10
             </h4>
+            <img
+              src="../../../assets/imdb.png"
+              class="rounded"
+              width="60px"
+              alt="IMDB LOGO"
+            />
           </div>
-          <div class="d-flex">
-            <h4 class="bg-danger px-2 rounded text-white">3D</h4>
-            <h4>{{ data.Language }}</h4>
+          <div class="d-flex gap-3">
+            <h4 class="bg-danger px-2 rounded text-white">2D</h4>
+            <h4 class="text-white fw-bolder">{{ data.Language }}</h4>
+          </div>
+          <div class="d-flex gap-3">
+            <p class="text-white fw-bolder">{{ data.Genre }}</p>
+            <span class="text-white fw-bolder">|</span>
+            <p class="text-white fw-bolder">{{ data.Runtime }}</p>
+            <span class="text-white fw-bolder">|</span>
+            <p class="text-white fw-bolder">{{ data.Released }}</p>
           </div>
           <div>
-            <p>{{ data.Genre }}</p>
-            <p>{{ data.Runtime }}</p>
-            <p>{{ data.Released }}</p>
+            <button class="watchbtn allbtn rounded" (click)="watch()">
+              Watch Trailer
+            </button>
+            <button
+              routerLink="/Movie/Booking/{{ data.Title }}"
+              type="button"
+              class="bookbtn allbtn rounded"
+              (click)="clear()"
+            >
+              Book Tickets
+            </button>
           </div>
-          <button (click)="watch()">Watch Trailer</button>
-          <button
-            routerLink="/Movie/Booking/{{ data.Title }}"
-            type="button"
-            class="btn btn-primary"
-          >
-            Book Tickets
-          </button>
         </div>
       </div>
     </div>
   </ng-template>
-  <div class="moviedetails2">
+  <div class="moviedetails2 p-4">
     <div>
       <h2>Movie Description</h2>
       <p>{{ data.Plot }}</p>
@@ -79,7 +86,6 @@
     <div>
       <h2>Writers</h2>
       <p>{{ data.Writer }}</p>
-      <hr />
     </div>
   </div>
 </div>

@@ -1,6 +1,9 @@
-<h3>Movies :</h3>
-<div class="movcontainer">
-  <div *ngFor="let x of data">
-    <app-moviecard [details]="x"></app-moviecard>
+<div class="mt-4">
+  <h3>Movies ▶️</h3>
+  <hr />
+  <div class="movcontainer">
+    <div *ngFor="let x of data">
+      <app-moviecard [details]="x"></app-moviecard>
+    </div>
   </div>
 </div>

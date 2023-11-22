@@ -15,7 +15,9 @@ export class MoviedetailComponent implements OnInit {
   data: any;
   movietitle: string;
   watchtrailer: boolean;
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) {
+    this.watchtrailer = false;
+  }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
@@ -29,6 +31,8 @@ export class MoviedetailComponent implements OnInit {
 
   watch() {
     this.watchtrailer = !this.watchtrailer;
-    console.log(this.watchtrailer);
+  }
+  clear() {
+    this.watchtrailer = false;
   }
 }

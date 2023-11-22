@@ -1,10 +1,13 @@
-<div class="container">
-  <div class="movietitle">
-    <h1>{{ moviedata.Title }}</h1>
-    <p>{{ moviedata.Genre }}</p>
-  </div>
+<div class="movietitle">
+  <h1>{{ moviedata.Title }}</h1>
+  <p>{{ moviedata.Genre }}</p>
+</div>
+<div class="selectinfo">
   <app-dateslider></app-dateslider>
-  <div *ngIf="this.seatlayout; else elseBlock">
+  <div
+    style="margin-left: 80px; margin-top: 20px; margin-bottom: 20px"
+    *ngIf="this.seatlayout; else elseBlock"
+  >
     <app-seatchoice
       [moviedata]="moviedata"
       [noofseats]="this.seatstobechosed"

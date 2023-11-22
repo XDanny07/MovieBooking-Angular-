@@ -5,10 +5,33 @@
   cursor: pointer;
   background-color: white;
 }
+.imdb {
+  z-index: -1;
+  transition: all ease-in-out 150ms;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+}
+.moviecard:hover .imdb {
+  opacity: 1;
+  transform: translateY(-110%);
+}
+.imdb {
+  font-weight: 600;
+}
+.posterimg {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+.moviecard h5 {
+  font-weight: 600;
+}
 .moviecard:hover {
   transform: scale(1.01);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.moviecard::after {
+.comingsoon {
   position: absolute;
   top: 0;
   right: 0;

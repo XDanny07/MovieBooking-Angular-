@@ -15,4 +15,19 @@
   padding: 10px;
 }
 .movietitle {
+  padding: 10px;
+  background: linear-gradient(
+    177.9deg,
+    rgb(58, 62, 88) 3.6%,
+    rgb(119, 127, 148) 105.8%
+  );
+}
+.movietitle h1,
+.movietitle p {
+  margin-left: 115px;
+  color: white;
+  font-weight: 600;
+}
+.selectinfo {
+  margin-left: 115px;
 }

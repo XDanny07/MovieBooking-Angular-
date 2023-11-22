@@ -1,8 +1,8 @@
-<div>
+<div class="seatcontainer">
   <div class="recliners">
-    <p>ROYAL RECLINERS-Rs570</p>
+    <p>ROYAL RECLINERS - ₹570</p>
     <hr />
-    <div class="d-flex align-items-center gap-5">
+    <div class="d-flex align-items-center gap-5 mb-3">
       <div style="width: 29px"><span>A</span></div>
       <div class="d-flex gap-2">
         <div *ngFor="let n of this.seatmap">
@@ -21,8 +21,8 @@
       </div>
     </div>
   </div>
-  <div class="gold">
-    <p>GOLD-Rs300</p>
+  <div class="gold mb-3">
+    <p>GOLD - ₹300</p>
     <hr />
     <div style="margin-top: 10px" class="d-flex align-items-center gap-5">
       <div style="width: 29px"><span>B</span></div>
@@ -79,8 +79,8 @@
       </div>
     </div>
   </div>
-  <div class="silver">
-    <p>SILVER-Rs210</p>
+  <div class="silver mb-3">
+    <p>SILVER - ₹210</p>
     <hr />
     <div
       style="margin-top: 10px"
@@ -111,8 +111,8 @@
     routerLink="/Movie/Payment/{{ this.moviedata.Title }}/{{ this.amount }}/{{
       this.finalseats
     }}"
-    class="btn btn-danger px-4"
+    class="allbtn rounded px-5"
   >
-    Pay {{ this.amount }}
+    Pay ₹{{ this.amount }}
   </button>
 </div>

@@ -49,6 +49,11 @@ export class DatesliderComponent implements OnInit {
       this.datescardinfo.push(ob);
     }
   }
+  first() {
+    const e = document.querySelectorAll<HTMLElement>('.datebox')[0];
+    e.style.color = 'white';
+    e.style.backgroundColor = 'rgb(16, 145, 197)';
+  }
   changedates(n: number) {
     if (n == 1) {
       if (this.toDisplay != 3) this.toDisplay++;

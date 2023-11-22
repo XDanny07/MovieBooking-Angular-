@@ -1,8 +1,15 @@
-<div
-  class="moviecard border border-1 p-1"
-  routerLink="/Movie/{{ details.Title }}"
->
-  <img src="{{ details.Poster }}" alt="" />
-  <h5>{{ details.Title }}</h5>
-  <span class="light">{{ details.Genre }}</span>
+<div class="moviecard rounded" routerLink="/Movie/{{ details.Title }}">
+  <div class="imdb d-flex align-items-center justify-content-between">
+    <img src="../../../assets/imdb.png" class="rounded" width="80" alt="" />
+    <div class="d-flex align-items-center gap-1">
+      <span class="font-weight-bold">{{ this.details.imdbRating }}</span>
+      <img src="../../../assets/star.png" alt="" />
+    </div>
+  </div>
+  <span *ngIf="this.details.Comingsoon" class="comingsoon">Coming Soon</span>
+  <img class="rounded posterimg" src="{{ details.Poster }}" alt="" />
+  <div class="p-2 position-relative">
+    <h5>{{ details.Title }}</h5>
+    <span class="font-weight-light">{{ details.Genre }}</span>
+  </div>
 </div>

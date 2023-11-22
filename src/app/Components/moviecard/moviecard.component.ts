@@ -36,6 +36,8 @@ export class MoviecardComponent {
     BoxOffice: string;
     Production: string;
     Website: string;
+    Comingsoon: boolean;
+    Trailer: string;
     Response: string;
   };
 }

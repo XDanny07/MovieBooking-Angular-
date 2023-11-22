@@ -4,3 +4,32 @@
 body {
   overflow-x: hidden;
 }
+
+.allbtn {
+  background: #ff4742;
+  border: 1px solid #ff4742;
+  transition: all ease-in-out 100ms;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+}
+
+.allbtn:hover,
+.allbtn:active {
+  background-color: white;
+  background-position: 0 0;
+  color: #ff4742;
+}
+.allbtn:active {
+  opacity: 0.5;
+}

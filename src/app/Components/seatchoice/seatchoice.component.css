@@ -1,3 +1,7 @@
+.seatcontainer {
+  width: 100vw;
+  margin: auto;
+}
 .seat {
   text-align: center;
   border: solid;
@@ -19,4 +23,7 @@
 }
 span {
   pointer-events: none;
+}
+button {
+  margin-left: 32%;
 }

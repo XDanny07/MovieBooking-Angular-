@@ -1,5 +1,7 @@
-<div class="dateslider d-flex justify-items-center align-items-center gap-2">
-  <button (click)="changedates(-1)">Prev</button>
+<div
+  class="dateslider d-flex justify-items-center align-items-center gap-2 pt-3 pb-3"
+>
+  <button class="allbtn rounded" (click)="changedates(-1)">Prev</button>
   <div class="alldates d-flex gap-1">
     <div
       style="min-width: 60px"
@@ -13,5 +15,5 @@
       <span>{{ d.month }}</span>
     </div>
   </div>
-  <button (click)="changedates(1)">Next</button>
+  <button class="allbtn rounded" (click)="changedates(1)">Next</button>
 </div>
